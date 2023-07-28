@@ -1,0 +1,54 @@
+Take as input a number n. Determine whether it is prime or not. If it is prime, 
+print "Prime" otherwise print "Not Prime".
+Input Format
+
+Integer
+
+Constraints
+
+n <= 10 ^ 9
+
+Output Format
+
+String
+
+Sample Input 0
+
+7
+Sample Output 0
+
+Prime
+Sample Input 1
+
+9
+Sample Output 1
+
+Not Prime
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String args[] ) throws Exception {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+      Scanner sc = new Scanner(System.in);
+  int n = sc.nextInt();
+  int count = 0;
+  int x = 1;
+  while (x<=n){
+    if (n%x == 0){
+      count++;
+    }
+    x++;
+  }
+  if (count>2){
+    System.out.print("Not Prime");
+  }
+  else{
+    System.out.print("Prime");
+  }
+    }
+}
